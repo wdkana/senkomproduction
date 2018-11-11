@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGalerivideosTable extends Migration
+class CreateGaleriVideosTable extends Migration
 {
     /**
      * Run the migrations.

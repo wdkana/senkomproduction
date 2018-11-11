@@ -23,11 +23,12 @@ class GaleriController extends Controller
     public function index()
     {
         $galeris = Galeri::orderBy('created_at', 'asc')->take(10)->get();
+        $videos = Galerivideos::orderBy('created_at', 'asc')->take(10)->get();
         if(Session::get('login')){
             if(Session::get('role') == "admin"){
-                return view('user_component.admin.galeri', compact('galeris'));        
+                return view('user_component.admin.galeri', compact('galeris', 'videos'));        
             }else{
-                return view('user_component.user.galeri', compact('galeris'));
+                return view('user_component.user.galeri', compact('galeris', 'videos'));
             }
         }
          
